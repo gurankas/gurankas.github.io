@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(22, 22, 22) !important;
+    background: rgb(60,60,60);
+    background: linear-gradient(13deg, rgba(60,60,60,1) 0%, rgba(255,211,136,1) 49%, rgba(17,113,255,1) 100%);
+
+      /*  background-image: url("./Files/Images/dp.png");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-attachment: scroll;
+        background-size: 350px;
+        background-repeat: repeat-y;
+        */
+}
+
+body p a{
+    color: rgb(219, 219, 117);
+}
+
+body p a:hover{
+    color: rgb(243, 243, 75);
+    text-decoration: none;
+}
+
+button a{
+    color: lightgray;
+}
+
+.container{
+    margin-bottom: 20px;
+}
+
+.container .card-img{
+    object-fit: cover;
+    height: 100%;
+    /*width: 88%;*/
+    border-radius: 6px;
+    position: absolute;
+}
+
+.container .card{
+    margin: auto;
+    margin-top: 50px;
+    border: 15px solid rgb(44, 44, 44);
+    border-radius: 10px;
+}
+
+.comments{
+    font-style: italic;
+    color: rgb(88, 88, 88);
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+
+#featured .card-img-top{
+    height: 50%;
+    max-height: 10em;
+}
+
+#featured .card{
+    margin: auto;
+    margin-top: 50px;
+}
+
+.nav-link{
+    color: lightgrey;
+}
+
+.nav-link:hover{
+    color: lightgrey;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: green; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
