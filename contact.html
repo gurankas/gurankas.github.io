@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $from = $_POST['email']; // this is the sender's Email address
       echo '$from';
       $name = $_POST['name'];
-      $subject = "Form submission";
+      $subject = $_POST['subject'];
       $subject2 = "Copy of your form submission";
       $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
       $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
@@ -54,11 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $headers = "From:" . $from;
       $headers2 = "From:" . $to;
       mail($to,$subject,$message,$headers);
-      mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
       echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
-}else {
-            echo '<p>Something went wrong, go back and try again!</p>';
-        }
+}
 ?>
 
 <!doctype html>
@@ -95,13 +92,6 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #45a049;
-}
-
-/* Style the container/contact section */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
 }
 
 /* Create two columns that float next to eachother */
@@ -149,9 +139,9 @@ input[type=submit]:hover {
 
   <div class="container">
     <nav class="navbar navbar-dark rounded w-75" style="margin: auto; margin-top: 100px; ">
-      <a href="index.html" class="navbar-brand text-light"><i class="fas fa-code"></i> Gurankas Singh</a>
-      <a href="contact.html" class="text-center" style="color: rgb(250, 250, 250);">Contact me</a>
-      <a href="Files/Resume.pdf" target="_blank" class="text-center" style="color: rgb(250, 250, 250)";>Resume</a>
+      <a href="index.html" class="navbar-brand text-light"><i class="fas fa-code"></i><b> Gurankas Singh</b></a>
+      <a href="index.html" class="text-center" style="color: rgb(250, 250, 250);"><b>Home</b></a>
+      <a href="Files/Resume.pdf" target="_blank" class="text-center" style="color: rgb(250, 250, 250)";><b>Resume</b></a>
       <form class="form-inline">
         <a target="_blank" href="https://github.com/gurankas" class="text-light mr-2" style="font-size: 35px;">
           <i class="fab fa-github-square"></i></a>
@@ -162,15 +152,15 @@ input[type=submit]:hover {
       </form>
     </nav>
     <!-- new game goes under here -->
-
+</br>
 
     <div class="container">
       <div style="text-align:center">
-        <h2>Contact Me</h2>
+        <h1>Contact Me</h1>
         <p>Whether you have an opportunity, want to provide feedback or even just request information, this is the right spot to do it.
-
+</br>
 You can get in contact with me by submitting the form below. They get forwarded directly to my personal account so I can read them and reply promptly.
-
+</<br>
 Looking forward to hearing from you! You can also find me on social platforms, by accessing the links on the footer.
 
 :</p>
@@ -186,20 +176,19 @@ Looking forward to hearing from you! You can also find me on social platforms, b
             <span class="error">* <?php echo $nameErr;?></span>
             <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-            <label for="email">E-mail</label>
+            <label for="email">E-mail</label>     <span class="error">* <?php echo $emailErr;?></span>
             </br>
             <input type="email" id="email" name="email" placeholder="Your email..">
-            <span class="error">* <?php echo $emailErr;?></span>
-            </br>
+            </br></br>
 
-            <label for="subject">Subject</label>
+            <label for="subject">Subject</label>  <span class="error">* <?php echo $subjectErr;?></span>
             <input type="text" id="subject" name="subject"placeholder="Subject..">
-              <span class="error">* <?php echo $subjectErr;?></span>
 
-            <label for="message">Message</label>
+
+            <label for="message">Message</label>  <span class="error">* <?php echo $messageErr;?></span>
             <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
-              <span class="error">* <?php echo $messageErr;?></span>
 
+</br></br>
             <input type="submit" name="submit" value="Submit">
           </form>
         </div>
