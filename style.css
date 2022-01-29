@@ -38,11 +38,10 @@ button a{
 }
 
 .container .card-img{
-    object-fit: cover;
     height: 100%;
-    /*width: 88%;*/
     border-radius: 6px;
     position: absolute;
+    object-fit: contain;
 }
 
 .container .card{
