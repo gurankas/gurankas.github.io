@@ -3,9 +3,9 @@ html {
     height: 100%;
 }
 body{
-   /* background-color: rgb(22, 22, 22) !important;
-    background: rgb(60,60,60);*/
-    background: linear-gradient(13deg, rgba(60,60,60,1) 0%, rgba(255,211,136,1) 49%, rgba(17,113,255,1) 100%);
+    background-color: rgb(22, 22, 22) !important;
+    background: rgb(60,60,60);
+    /*background: linear-gradient(13deg, rgba(60,60,60,1) 0%, rgba(255,211,136,1) 49%, rgba(17,113,255,1) 100%);*/
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -18,6 +18,16 @@ body{
         background-size: 350px;
         background-repeat: repeat-y;
         */
+}
+
+
+
+p {
+      color: rgb(230, 230, 230);
+}
+
+a {
+      color: rgb(230, 230, 230);
 }
 
 body p a{
@@ -34,7 +44,15 @@ button a{
 }
 
 .container{
-    margin-bottom: 20px;
+      margin-bottom: 20px;
+}
+
+.contactme {
+  margin:0 auto;
+  width:600px //you can set it in %.
+  padding:20px;
+  background:#353535;
+  border:50px solid #333;
 }
 
 .container .card-img{
@@ -47,8 +65,10 @@ button a{
 .container .card{
     margin: auto;
     margin-top: 50px;
-    border: 15px solid rgb(44, 44, 44);
+    border: 7px solid rgb(30, 30, 30);
     border-radius: 10px;
+    background-color: rgb(52, 52, 52);
+    color: rgb(230, 230, 230);
 }
 
 .comments{
@@ -93,6 +113,27 @@ button a{
   font-size: 18px; /* Increase font size */
 }
 
+/* .btn-outline-info{
+  color: rgb(230, 230, 230) !important;
+  background-color:  rgb(145, 145, 145) !important;
+  outline: inherit;
+} */
+
+/* .btn {
+            padding: 1rem 2rem
+          }
+        .btn-outline-primary, .btn-outline-primary:hover {
+            background-color: #232323;
+            border-color: #D5A021;
+        }
+        .btn-outline-primary:active,
+        .btn-outline-primary:focus {
+            color: #fff;
+            background-color: #D5A021 !important;
+            border-color: #D5A021 !important;
+            box-shadow: 0 0 0 0.2rem rgba(213,160,33, 0.5) !important;
+        } */
+
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
 }
@@ -116,7 +157,7 @@ button a{
  }
 
  ul.card-list{
-
      list-style: none;
      padding: 0;
+     padding-left: 5px;
  }
